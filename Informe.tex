@@ -21,47 +21,66 @@
 	Primero se procede a abrir el programa CISCO Packet Tracer, desde la consola del equipo del laboratorio, una vez hecho esto se
 	continúa a sacar tres switch desde la parte inferior izquierda en el apartado de switch, después se posicionan de manera que
 	formen un triángulo,uniendo con enlaces cruzados para lograr formar una topología con bucles. Gracias al STP la conexión entre switch 0 y switch 2 se desactiva parcialmente para así evitar bucles \\\\
-	\begin{figure}[H]
+	
+	\begin{figure}[h]
     \centering
-    \includegraphics[width=8cm]{act1} %PONER FOTO
-    \caption{Topología con bucles}
+    \includegraphics[width=15cm, height=9cm]{2.png}
+    \caption{Topología base con bucles}
     \end{figure}
+    \newpage
     	{\large \bf{Desactivar y Activar STP para una VLAN: }}\\
     	Con los comandos entregados se realizó lo pedido:
     	
-    	%PONER FOTO
-    
+    \begin{figure}[h]
+    \centering
+    \includegraphics[width=12cm, height=10cm]{1.png}
+    \caption{Desactivar STP}
+    \end{figure}
+    \newpage
 	\section{Configuración de STP}
 	Una vez con la topología con bucles se procede a aplicar el protocolo STP, para llevar esto acabo se deberá configurar cada
 	switch desde la consola, esto se realiza haciendo clic en el switch, después se va a la pestaña donde dice CLI, y ahí se le
 	ingresan los comandos correspondientes para configurar cada switch según sea necesario. Se configura un el switch 0 como root primario y switch 1 como root secundario alterando el orden en que estaba.\\
 	{\large \bf{Para primario: }}\\
-	%FOTO
+	
+	\begin{figure}[h]
+    \centering
+    \includegraphics[width=12cm, height=10cm]{3.png}
+    \caption{Establecer Root primary}
+    \end{figure}
+    \newpage
 	
 	{\large \bf{Para secundario: }}\\
-    %Foto	
+	
+    \begin{figure}[h]
+    \centering
+    \includegraphics[width=12cm, height=10cm]{4.png}
+    \caption{Establecer Root secondary}
+    \end{figure}
 	
 	
-	\begin{figure}[H]
+	\begin{figure}[h]
 	\centering
-	\includegraphics[width=8cm]{act2}%PONER FOTO
+	\includegraphics[width=8cm]{5.png}
 	\caption{Topología con roots asignados}
 	\end{figure}\\
-	\vfill 
 
 	\section{Priorización STP}
 	   
 	    Ya aplicada la configuración del STP se continua a asignarle una prioridad a cada switch,  para esto nuevamente se hace clic	sobre él, se dirige hacia la pestaña CLI, ya una vez ahí se le asignó al switch 1 (priority= 4096) la mayor prioridad, luego quedó el switch 2 (priority= 24576) con la siguiente prioridad y quedando con la menor, el switch 0 (priority= 28672).\\\\\
 	    
-	    %Foto
-	    
+	\begin{figure}[h]
+    \centering
+    \includegraphics[width=8cm]{7.png}
+    \caption{Establecer priority}
+    \end{figure}
 	 
-        \begin{figure}[H]
-	\centering
-	\includegraphics[width=8cm]{act2}
-	
-		\end{figure}
-
+    \begin{figure}[h]
+    \centering
+    \includegraphics[width=8cm]{8.png}
+    \caption{Topología con bucles}
+    \end{figure}
+    
 	\caption{Topología con prioridad}\\\\
 	
 	
